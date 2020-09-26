@@ -1,7 +1,7 @@
 {
-  "name": "@fvictorio/gsc",
+  "name": "gsc-devnet",
   "version": "0.0.13",
-  "description": "",
+  "description": "distributed gsc",
   "bin": {
     "gsc": "generate.js",
     "gsc-run": "index.js"
@@ -11,7 +11,7 @@
     "prettier": "prettier --write '**/*.{js,json}'"
   },
   "keywords": [],
-  "author": "",
+  "author": "see CONTRIBUTORS",
   "license": "ISC",
   "dependencies": {
     "@truffle/contract": "^4.1.9",
