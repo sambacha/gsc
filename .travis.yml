@@ -9,4 +9,5 @@ before-install: npm install -g ganache-cli
 
 install: npm install 
 
-scripts: ./node_modules/.bin/ganache-cli -d --db db -h 0.0.0.0 -i 50 -l 10000000
+scripts: true
+#scripts: ./node_modules/.bin/ganache-cli -d --db db -h 0.0.0.0 -i 50 -l 10000000
