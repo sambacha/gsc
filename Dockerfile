@@ -1,5 +1,7 @@
 FROM debian:stretch-slim
 
+SHELL ["/bin/bash", "-exo", "pipefail", "-c"]
+
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
@@ -90,6 +92,17 @@ RUN set -ex \
   && yarn --version
   
 RUN npm install -g ganache-cli
+
+RUN apt-get update \
+  && apt-get upgrade -y \
+  && apt-get install -y git wget curl build-essential zip jq openssh-client sudo libpq-dev unzip  -qq
+
+#COPY --chown=contractshark:contractshark . /home/contractshark/ganache
+#WORKDIR /home/coontractshark/ganache
+
+#RUN useradd -m contractshark && sudo apt update -y -qq
+#USER contractshark
+
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
