@@ -1,16 +1,25 @@
 {
-  "name": "gsc-devnet",
-  "version": "0.0.13",
-  "description": "distributed gsc",
+  "name": "ganache-sandbox",
+  "version": "0.0.14",
+  "description": "distributed ganache sandbox environment",
   "bin": {
     "gsc": "generate.js",
     "gsc-run": "index.js"
   },
   "scripts": {
     "lint": "eslint .",
-    "prettier": "prettier --write '**/*.{js,json}'"
+    "prettier": "prettier --write '**/*.{js,json}'",
+    "test:ganache": "ganache-cli -d",
+     "test:truffle": "truffle test",
+    "test": "bash _test.sh"
   },
-  "keywords": [],
+  "keywords": [
+    "ganache",
+    "ethereum",
+    "erc20",
+    "truffle",
+    "solidity"
+  ],
   "author": "see CONTRIBUTORS",
   "license": "ISC",
   "dependencies": {
@@ -27,6 +36,9 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "ganache-cli": "^6.12.2",
+    "jest": "^26.6.3",
+    "prettier": "^1.19.1",
+    "truffle": "^5.1.65"
   }
 }

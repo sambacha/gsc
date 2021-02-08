@@ -2,7 +2,7 @@ const helper = {}
 const readline = require('readline');
 const {sendTransaction} = require('./Web3OperationUtils')
 const {append} = require('./logs')
-const {STORE_DATA} =require('../keys')
+const {STORE_DATA} = require('../keys')
 let count = 0
 let failed = 0
 
