@@ -7,3 +7,11 @@ gnosis-safe/
 Dockerfile
 config.json
 prepare_db.sh
+.DS_Store
+*.tar.gz
+yearn-protocol/
+*.tgz
+*.log
+*.zip
+.vscode/
+.idea/
