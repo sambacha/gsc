@@ -2,6 +2,10 @@
 
 Create a docker image of a ganache instance with all your required projects already deployed.
 
+## Example 
+
+[see ganache-sandbox-example repo](https://github.com/sambacha/ganache-sandbox-example)
+
 ## The problem
 
 If you are building a dapp that interacts with other ethereum projects, you have a couple of options:
@@ -18,7 +22,7 @@ All these problems can be fixed if you create a docker image with a ganache inst
 
 This project lets you do all of that in a very easy way.
 
-First, you run `npx @fvictorio/gsc` in an empty directory and choose the projects you want to include. This will create a `Dockerfile` and some other files. You can then do `docker build -t my-sandbox .` and then you can run it with `docker run -it -p 8545:8545 my-sandbox`. And that's it! You have a working ganache instance with the selected projects. You can also do `docker run -it my-sandbox cat addresses.json` to see the addresses of all the relevant contracts for each project.
+First, you run `npx ganache-sandbox` in an empty directory and choose the projects you want to include. This will create a `Dockerfile` and some other files. You can then do `docker build -t my-sandbox .` and then you can run it with `docker run -it -p 8545:8545 my-sandbox`. And that's it! You have a working ganache instance with the selected projects. You can also do `docker run -it my-sandbox cat addresses.json` to see the addresses of all the relevant contracts for each project.
 
 ## Supported projects
 
@@ -37,3 +41,8 @@ If you want some other one to be included, just [open an issue](https://github.c
 You can select how many mock tokens will be created. The generated `config.json` will have a list of tokens under the
 `mock-tokens` project. By default each token is represented by an empty object. For each one, you can add the properties `totalSupply`,
 `name`, `symbol` and `decimals`.
+
+
+## License 
+
+MIT - Original author [@fvictorio](https://github.com/fvictorio/gsc)
