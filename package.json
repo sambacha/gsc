@@ -1,5 +1,5 @@
 {
-  "name": "gsc-devnet",
+  "name": "ganache-sandbox",
   "version": "0.0.13",
   "description": "distributed gsc",
   "bin": {
@@ -7,8 +7,7 @@
     "gsc-run": "index.js"
   },
   "scripts": {
-    "lint": "eslint .",
-    "prettier": "prettier --write '**/*.{js,json}'"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "see CONTRIBUTORS",
