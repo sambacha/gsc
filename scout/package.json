@@ -1,5 +1,5 @@
 {
-  "name": "@contractshark/gsc-explore,
+  "name": "@contractshark/gsc-explore",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
